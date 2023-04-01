@@ -9,10 +9,10 @@ from controller import Controller
 from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("Create: \n1.id diode.\n2.is diode.\n3.vt & temp diode.\n4.vd diode.\n5.n diode.\n6.temp diode. \n7.Jfet & Mosfet emp.\n8.Mosfet & Mesfet enr.\n9.ATMEGA UBRR.\n10.PCB.\n11.Resistances addition.\n12.D->Y.\n13.Y->D.\n14.Grades to rads.\n15.Rads to grades.\n16.Rec-pol\n17.Pol-rec.\n18.Roots.\n19.flc.\n20.L or C.\n21.Hay Maxwell\n22.Controller.\n23.V or I divisor\n24.Exit "))
+option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
 
-while option!=24:
-    
+while option!=5:
+    ''''''
     if option == 1:
         isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
         vd=float(input("Type direct polarization diode voltage: "))
@@ -152,5 +152,5 @@ while option!=24:
         z2=float(input("Type Z1 value: "))
         vs=float(input("Type Vs value: "))
         Divisor.calculate_divisor(vs,z1,z2)
-                
-    option=int(input("Create: \n1.id diode.\n2.is diode.\n3.vt & temp diode.\n4.vd diode.\n5.n diode.\n6.temp diode. \n7.Jfet & Mosfet emp.\n8.Mosfet & Mesfet enr.\n9.ATMEGA UBRR.\n10.PCB.\n11.Resistances addition.\n12.D->Y.\n13.Y->D.\n14.Grades to rads.\n15.Rads to grades.\n16.Rec-pol\n17.Pol-rec.\n18.Roots.\n19.flc.\n20.L or C.\n21.Hay Maxwell\n22.Controller.\n23.V or I divisor\n24.Exit "))
+    '''            
+    
