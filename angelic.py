@@ -12,6 +12,33 @@ print(" A  N  G  E  L  I  C")
 option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
 
 while option!=5:
+    
+    if option==1:
+        optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n.3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
+        while optioncal!=6:
+            if optioncal==1:
+                gradeang=float(input("Type grade value: "))
+                Mathcalculus.calculate_rads(gradeang)
+            elif optioncal==2:
+                radang=float(input("Type rads value: "))
+                Mathcalculus.calculate_grades(radang)
+            elif optioncal==3:
+                a=float(input("Type a value: "))
+                b=float(input("Type b value: "))
+                c=float(input("Type c value: "))
+                Mathcalculus.calculate_roots(a,b,c)
+            elif optioncal==4:
+                xvalue=float(input("Type real value: "))
+                yvalue=float(input("Type y value: "))
+                Mathcalculus.calculate_pol(xvalue,yvalue)
+            elif option==5:
+                amp=float(input("Type amplitude value: "))
+                phase=float(input("Type phase value in rads: "))
+                Mathcalculus.calculate_rec(amp,phase)        
+            elif option==6:
+                print("Returning to main menu.")
+        optioncal=int(input("1.1.Grade to rads.\n1.2.Rads to grades\n.1.3.roots.\n1.4.Recpol"))
+        
     '''
     if option == 1:
         isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
