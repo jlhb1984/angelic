@@ -12,7 +12,7 @@ print(" A  N  G  E  L  I  C")
 option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
 
 while option!=5:
-    ''''''
+    '''
     if option == 1:
         isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
         vd=float(input("Type direct polarization diode voltage: "))
