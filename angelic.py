@@ -14,7 +14,7 @@ option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.E
 while option!=5:
     
     if option==1:
-        optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n.3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
+        optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
         while optioncal!=6:
             if optioncal==1:
                 gradeang=float(input("Type grade value: "))
@@ -31,14 +31,16 @@ while option!=5:
                 xvalue=float(input("Type real value: "))
                 yvalue=float(input("Type y value: "))
                 Mathcalculus.calculate_pol(xvalue,yvalue)
-            elif option==5:
+            elif optioncal==5:
                 amp=float(input("Type amplitude value: "))
                 phase=float(input("Type phase value in rads: "))
                 Mathcalculus.calculate_rec(amp,phase)        
-            elif option==6:
-                print("Returning to main menu.")
-        optioncal=int(input("1.1.Grade to rads.\n1.2.Rads to grades\n.1.3.roots.\n1.4.Recpol"))
-        
+            optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
+    
+    option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
+    
+    if option==2:
+        print("Working on it!")   
     '''
     if option == 1:
         isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
