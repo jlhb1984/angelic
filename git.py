@@ -23,7 +23,9 @@ commands={
     "git config --list":"List for configuration.",
     "git config --list --show-origin":"Core information",
     "git config --global user.name \"My name\"":"For put name of user.",
-    "git config --global user.email \"My name\"":"For put name of mail."
+    "git config --global user.email \"My name\"":"For put name of mail.",
+    "git rm + file":"Remove.",
+    "git rm --cached":"File without add."
     }
 
 print(commands)
