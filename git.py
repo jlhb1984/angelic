@@ -18,6 +18,7 @@ commands={
     "command --help":"Explanations about commands.",    
     "git status":"State of project.",
     "git add":"Add an action in the project.",
+    "git add .":"Ad all files.",
     "git commit -m":"Track changes with a message.",
     "git config":"For git configuration.",
     "git config --list":"List for configuration.",
@@ -25,7 +26,9 @@ commands={
     "git config --global user.name \"My name\"":"For put name of user.",
     "git config --global user.email \"My name\"":"For put name of mail.",
     "git rm + file":"Remove.",
-    "git rm --cached":"File without add."
+    "git rm --cached":"File without add.",
+    "git log":"Tracking.",
+    "esc + shift + zz":"To exit of comment window."
     }
 
 print(commands)
