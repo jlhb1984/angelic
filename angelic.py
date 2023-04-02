@@ -14,7 +14,7 @@ option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.E
 while option!=5:
     
     if option==1:
-        optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
+        option_cal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
         while optioncal!=6:
             if optioncal==1:
                 gradeang=float(input("Type grade value: "))
@@ -37,10 +37,48 @@ while option!=5:
                 Mathcalculus.calculate_rec(amp,phase)        
             optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
     
-    option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
+    #option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
     
     if option==2:
-        print("Working on it!")   
+        option_circuit=int(input("1.Serial & parallel impedance addition.\n2.Y-D.\n3.D-Y.\n4.LC.\n5.flc.\n6.Hay-Maxwell.\n7.V-I divisors.\n8.Return. "))   
+        while option_circuit!=8:
+            if option_circuit==1:
+                n=int(input("Type number of resistaces to sum: "))
+                Circuit.calculate_resistances_addition(n)
+            elif option_circuit==2:
+                r1=float(input("Type R1 value: "))
+                r2=float(input("Type R2 value: "))
+                r3=float(input("Type R3 value: "))
+                Circuit.calculate_yd(r1,r2,r3)
+            elif option_circuit==3:
+                ra=float(input("Type Ra value: "))
+                rb=float(input("Type Rb value: "))
+                rc=float(input("Type Rc value: "))
+                Circuit.calculate_dy(ra,rb,rc)                
+            elif option_circuit==4:
+                l=float(input("Type L value in Henrys: "))
+                c=float(input("Type C value in Faradays: "))
+                Circuit.calculate_flc(l,c)
+            elif option_circuit==5:
+                lc=float(input("Type L value in Henrys or C value in Faradays: "))
+                f=float(input("Type frequency value in Hz: "))
+                Circuit.calculate_loc(lc,f)
+            elif option_circuit==6:
+                r1=float(input("Type R1 value: "))
+                r2=float(input("Type R2 value: "))
+                r3=float(input("Type R3 value: "))
+                r4=float(input("Type R4 value: "))
+                c=float(input("Type c value: "))
+                w=float(input("Type w value: "))    
+                Circuit.calculate_hmax(r1,r2,r3,r4,c,w)               
+            elif option_circuit==7:
+                z1=float(input("Type Z1(ra) value: "))
+                z2=float(input("Type Z1(rb) value: "))
+                vs=float(input("Type Vs value: "))
+                Divisor.calculate_divisor(vs,z1,z2)
+            option_circuit=int(input("1.Serial & parallel impedance addition.\n2.Y-D.\n3.D-Y.\n4.LC.\n5.flc.\n6.Hay-Maxwell.\n7.V-I divisors.\n8.Return. "))   
+            
+    option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
     '''
     if option == 1:
         isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
@@ -108,65 +146,8 @@ while option!=5:
         tf=float(input("Type opeational temperature in C: "))
         thickness=float(input("Type width in 1 (35u),2 (70u) or 3 (105u) ounces/foot^2: "))
         PCB.calculate_pcb_parameters(i,ti,tf,thickness) 
-    
-    elif option==11:
-        n=int(input("Type number of resistaces to sum: "))
-        Circuit.calculate_resistances_addition(n)
-    
-    elif option==12:
-        ra=float(input("Type Ra value: "))
-        rb=float(input("Type Rb value: "))
-        rc=float(input("Type Rc value: "))
-        Circuit.calculate_dy(ra,rb,rc)
-        
-    elif option==13:
-        r1=float(input("Type R1 value: "))
-        r2=float(input("Type R2 value: "))
-        r3=float(input("Type R3 value: "))
-        Circuit.calculate_yd(r1,r2,r3)
+   
                                 
-    elif option==14:
-        gradeang=float(input("Type grade value: "))
-        Mathcalculus.calculate_rads(gradeang)
-        
-    elif option==15:
-        radang=float(input("Type rads value: "))
-        Mathcalculus.calculate_grades(radang)
-        
-    elif option==16:
-        xvalue=float(input("Type real value: "))
-        yvalue=float(input("Type y value: "))
-        Mathcalculus.calculate_pol(xvalue,yvalue)
-        
-    elif option==17:
-        amp=float(input("Type amplitude value: "))
-        phase=float(input("Type phase value in rads: "))
-        Mathcalculus.calculate_rec(amp,phase)
-        
-    elif option==18:
-        a=float(input("Type a value: "))
-        b=float(input("Type b value: "))
-        c=float(input("Type c value: "))
-        Mathcalculus.calculate_roots(a,b,c)
-        
-    elif option==19:
-        l=float(input("Type L value in Henrys: "))
-        c=float(input("Type C value in Faradays: "))
-        Circuit.calculate_flc(l,c)
-        
-    elif option==20:
-        lc=float(input("Type L value in Henrys or C value in Faradays: "))
-        f=float(input("Type frequency value in Hz: "))
-        Circuit.calculate_loc(lc,f)
-        
-    elif option==21:
-        r1=float(input("Type R1 value: "))
-        r2=float(input("Type R2 value: "))
-        r3=float(input("Type R3 value: "))
-        r4=float(input("Type R4 value: "))
-        c=float(input("Type c value: "))
-        w=float(input("Type w value: "))    
-        Circuit.calculate_hmax(r1,r2,r3,r4,c,w)
         
     elif option==22:
         cita=float(input("Type cita value: "))
@@ -176,10 +157,6 @@ while option!=5:
             ts=float(input("Type ts value: "))
         Controller.calculate_controller(cita,ts)
         
-    elif option==23:
-        z1=float(input("Type Z1 value: "))
-        z2=float(input("Type Z1 value: "))
-        vs=float(input("Type Vs value: "))
-        Divisor.calculate_divisor(vs,z1,z2)
+    
     '''            
     
