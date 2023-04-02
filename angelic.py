@@ -9,7 +9,7 @@ from controller import Controller
 from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
+option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit. "))
 
 while option!=5:
     
