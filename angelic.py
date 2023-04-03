@@ -9,7 +9,7 @@ from controller import Controller
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
+option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
 
 while option!=8:
         
@@ -152,4 +152,4 @@ while option!=8:
             ts=float(input("Type ts value: "))
         Controller.calculate_controller(cita,ts)        
         
-    option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
+    option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
