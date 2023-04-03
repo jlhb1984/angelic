@@ -21,7 +21,7 @@ class Jfet(Transistor):
         id=idss*((1-vgs/vp)**2)
         gmo=(2*idss)/(vp)
         gm=gmo*(1-vgs/vp)
-        jfet1=Jfet(id,idss,vgs,vp,gm,gmo)
+        jfet1=Jfet(0,0,0,id,idss,vgs,vp,gm,gmo)
         print(vars(jfet1))
         
         
