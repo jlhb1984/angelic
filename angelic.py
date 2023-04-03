@@ -12,7 +12,7 @@ print(" A  N  G  E  L  I  C")
 option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit. "))
 
 while option!=5:
-    
+        
     if option==1:
         option_cal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
         while optioncal!=6:
@@ -36,9 +36,7 @@ while option!=5:
                 phase=float(input("Type phase value in rads: "))
                 Mathcalculus.calculate_rec(amp,phase)        
             optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
-    
-    #option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
-    
+       
     if option==2:
         option_circuit=int(input("1.Serial & parallel impedance addition.\n2.Y-D.\n3.D-Y.\n4.LC.\n5.flc.\n6.Hay-Maxwell.\n7.V-I divisors.\n8.Return. "))   
         while option_circuit!=8:
@@ -77,50 +75,55 @@ while option!=5:
                 vs=float(input("Type Vs value: "))
                 Divisor.calculate_divisor(vs,z1,z2)
             option_circuit=int(input("1.Serial & parallel impedance addition.\n2.Y-D.\n3.D-Y.\n4.LC.\n5.flc.\n6.Hay-Maxwell.\n7.V-I divisors.\n8.Return. "))   
-            
+    
+    if option==3:
+        option_diode=int(input("1.id.\n2.is.\n3.vt.\n4.vd.\n5.n.\n6.Return. "))  
+        while option_diode!=6:
+            if option_diode==1:
+                isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
+                vd=float(input("Type direct polarization diode voltage: "))
+                n=float(input("Type n, often is 1: "))
+                temp=float(input("Type kelvin temperature (K=Celsius+273): "))
+                Diode.calculate_id(isinvaux,vd,n,temp)   
+            elif option_diode==2:
+                idiode=float(input("Type id current: "))
+                vd=float(input("Type direct polarization diode voltage: "))
+                n=float(input("Type n, often is 1: "))
+                temp=float(input("Type kelvin temperature (K=Celsius+273): "))
+                Diode.calculate_is(idiode,vd,n,temp)
+            elif option_diode==3:
+                idiode=float(input("Type id current: "))
+                isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
+                vd=float(input("Type direct polarization diode voltage: "))
+                n=float(input("Type n, often is 1: "))
+                Diode.calculate_vt(idiode,isinvaux,vd,n)
+            elif option_diode==4:
+                idiode=float(input("Type id current: "))
+                isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
+                temp=float(input("Type kelvin temperature (K=Celsius+273): "))
+                n=float(input("Type n, often is 1: "))
+                vt=float(input("Type vt voltage: "))
+                Diode.calculate_vd(idiode,isinvaux,temp,n,vt)
+            elif option_diode==5:
+                idiode=float(input("Type id current: "))
+                isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
+                temp=float(input("Type kelvin temperature (K=Celsius+273): "))
+                vt=float(input("Type vt voltage: "))
+                vd=float(input("Type direct polarization diode voltage: "))
+                Diode.calculate_n(idiode,isinvaux,temp,vt,vd)
+            elif option_diode==6:
+                vt=float(input("Type vt voltage: "))
+                Diode.calculate_temp(vt)    
+            option_diode=int(input("1.id.\n2.is.\n3.vt.\n4.vd.\n5.n.\n6.Return. "))                  
     option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
+    
+    if option==4:
+        option_transistor=int(input("1.JFET & MOSFET EMP.\n.2.JFET & MOSFET ENR.\n3.Return. "))
+        while option_transistor!=3:
+            
+            
     '''
-    if option == 1:
-        isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
-        vd=float(input("Type direct polarization diode voltage: "))
-        n=float(input("Type n, often is 1: "))
-        temp=float(input("Type kelvin temperature (K=Celsius+273): "))
-        Diode.calculate_id(isinvaux,vd,n,temp)   
-                 
-    elif option==2:
-        idiode=float(input("Type id current: "))
-        vd=float(input("Type direct polarization diode voltage: "))
-        n=float(input("Type n, often is 1: "))
-        temp=float(input("Type kelvin temperature (K=Celsius+273): "))
-        Diode.calculate_is(idiode,vd,n,temp)
-        
-    elif option==3:
-        idiode=float(input("Type id current: "))
-        isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
-        vd=float(input("Type direct polarization diode voltage: "))
-        n=float(input("Type n, often is 1: "))
-        Diode.calculate_vt(idiode,isinvaux,vd,n)
-               
-    elif option==4:
-        
-        idiode=float(input("Type id current: "))
-        isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
-        temp=float(input("Type kelvin temperature (K=Celsius+273): "))
-        n=float(input("Type n, often is 1: "))
-        vt=float(input("Type vt voltage: "))
-        Diode.calculate_vd(idiode,isinvaux,temp,n,vt)
-        
-    elif option==5:
-        idiode=float(input("Type id current: "))
-        isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
-        temp=float(input("Type kelvin temperature (K=Celsius+273): "))
-        vt=float(input("Type vt voltage: "))
-        vd=float(input("Type direct polarization diode voltage: "))
-        Diode.calculate_n(idiode,isinvaux,temp,vt,vd)
-        
-    elif option==6:
-        vt=float(input("Type vt voltage: "))
-        Diode.calculate_temp(vt)
+    
         
     elif option==7:
         idss=float(input("Type Idss in Amp: "))
