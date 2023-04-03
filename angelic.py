@@ -6,7 +6,7 @@ from pcb import PCB
 from circuit import Circuit
 from mathcalculus import Mathcalculus
 from controller import Controller
-from divisor import Divisor
+#from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
 option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
@@ -73,7 +73,7 @@ while option!=8:
                 z1=float(input("Type Z1(ra) value: "))
                 z2=float(input("Type Z1(rb) value: "))
                 vs=float(input("Type Vs value: "))
-                Divisor.calculate_divisor(vs,z1,z2)
+                Circuit.calculate_divisor(vs,z1,z2)
             option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
     
     elif option==3:
