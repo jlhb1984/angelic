@@ -8,7 +8,7 @@ commands={
     "cd /":"Go home, it wanna mean root $. ",
     "ls":"Files in the directory.",
     "ls -al":"Shows hidden files.",
-    "clear":"Clean console, it is posssible ctrl + l.",
+    "clear":"Clean console, it is possible ctrl + l.",
     "mkdir + name of directory":"Create directory.",
     "touch":"Create an empty file.",
     "cat + file name":"Show file content.",
@@ -19,7 +19,7 @@ commands={
     "git status":"State of project.",
     "git add":"Add an action in the project.",
     "git add .":"Ad all files. Staged.",
-    "git commit -m":"Track changes with a message. It is in master",
+    "git commit -m":"Track changes with a message. It send files from staged to master",
     "git config":"For git configuration.",
     "git config --list":"List for configuration.",
     "git config --list --show-origin":"Core information",
@@ -28,7 +28,22 @@ commands={
     "git rm + file":"Remove.",
     "git rm --cached":"File without add.",
     "git log":"Tracking.",
-    "esc + shift + zz":"To exit of comment window."
+    "esc + shift + zz":"To exit of comment window.",
+    "checkout":"Shows all changes.",
+    "Stage":"RAM",
+    "Master":"Directory where is placed the main project.",
+    "git reset --hard":"Former version",
+    "git diff":"Differences between 2 files.",
+    "git log --stat":"All changes.",
+    "git checkout master + file":"Version required.",
+    "git push":"Send files to remote.",
+    "git fetch":"From remote to local.",
+    "git pull":"It is a kind of merge.",
+    "q":"Exit",
+    "git a":"",
+    "git show":"Show lastchanges.",
+    "git branch + name of new branch":"Create a new branch.",
+    "git checkout + name of new branch":"It moves to new branch."
     }
 
 print(commands)
