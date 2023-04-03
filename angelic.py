@@ -9,36 +9,36 @@ from controller import Controller
 from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit. "))
+option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Exit. "))
 
-while option!=5:
+while option!=7:
         
     if option==1:
-        option_cal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
-        while optioncal!=6:
-            if optioncal==1:
+        option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return."))
+        while option_cal!=6:
+            if option_cal==1:
                 gradeang=float(input("Type grade value: "))
                 Mathcalculus.calculate_rads(gradeang)
-            elif optioncal==2:
+            elif option_cal==2:
                 radang=float(input("Type rads value: "))
                 Mathcalculus.calculate_grades(radang)
-            elif optioncal==3:
+            elif option_cal==3:
                 a=float(input("Type a value: "))
                 b=float(input("Type b value: "))
                 c=float(input("Type c value: "))
                 Mathcalculus.calculate_roots(a,b,c)
-            elif optioncal==4:
+            elif option_cal==4:
                 xvalue=float(input("Type real value: "))
                 yvalue=float(input("Type y value: "))
                 Mathcalculus.calculate_pol(xvalue,yvalue)
-            elif optioncal==5:
+            elif option_cal==5:
                 amp=float(input("Type amplitude value: "))
                 phase=float(input("Type phase value in rads: "))
                 Mathcalculus.calculate_rec(amp,phase)        
-            optioncal=int(input("1.Grade to rads.\n2.Rads to grades\n3.roots.\n4.Rec pol\n5.Pol rec.\n6.Return."))
+            option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return."))
        
-    if option==2:
-        option_circuit=int(input("1.Serial & parallel impedance addition.\n2.Y-D.\n3.D-Y.\n4.LC.\n5.flc.\n6.Hay-Maxwell.\n7.V-I divisors.\n8.Return. "))   
+    elif option==2:
+        option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
         while option_circuit!=8:
             if option_circuit==1:
                 n=int(input("Type number of resistaces to sum: "))
@@ -74,10 +74,10 @@ while option!=5:
                 z2=float(input("Type Z1(rb) value: "))
                 vs=float(input("Type Vs value: "))
                 Divisor.calculate_divisor(vs,z1,z2)
-            option_circuit=int(input("1.Serial & parallel impedance addition.\n2.Y-D.\n3.D-Y.\n4.LC.\n5.flc.\n6.Hay-Maxwell.\n7.V-I divisors.\n8.Return. "))   
+            option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
     
-    if option==3:
-        option_diode=int(input("1.id.\n2.is.\n3.vt.\n4.vd.\n5.n.\n6.Return. "))  
+    elif option==3:
+        option_diode=int(input("  1.id.\n  2.is.\n  3.vt.\n  4.vd.\n  5.n.\n  6.Return. "))  
         while option_diode!=6:
             if option_diode==1:
                 isinvaux=float(input("Type inverse saturation current in picoAmperes: "))
@@ -114,52 +114,43 @@ while option!=5:
             elif option_diode==6:
                 vt=float(input("Type vt voltage: "))
                 Diode.calculate_temp(vt)    
-            option_diode=int(input("1.id.\n2.is.\n3.vt.\n4.vd.\n5.n.\n6.Return. "))                  
-    option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.Exit "))
-    
-    if option==4:
-        option_transistor=int(input("1.JFET & MOSFET EMP.\n.2.JFET & MOSFET ENR.\n3.Return. "))
+            option_diode=int(input("  1.id.\n  2.is.\n  3.vt.\n  4.vd.\n  5.n.\n  6.Return. "))                  
+        
+    elif option==4:
+        option_transistor=int(input("  1.JFET & MOSFET EMP.\n  2.JFET & MOSFET ENR.\n  3.Return. "))
         while option_transistor!=3:
-            
-            
-    '''
+            if option_transistor==1:
+                idss=float(input("Type Idss in Amp: "))
+                vp=float(input("Type vp in Volts: "))
+                vgs=float(input("Type vgs in Volts: "))
+                Jfet.calculate_parameters_jfet(idss,vgs,vp)
+            elif option_transistor==2:
+                idon=float(input("Type idon value: "))
+                vgson=float(input("Type vgson value: "))
+                vgsth=float(input("Type vgsth value: "))
+                vgs=float(input("Type vgs value: ")) 
+                Mosfet.calculate_parameters_mosfet(idon,vgson,vgsth,vgs)
+            option_transistor=int(input("  1.JFET & MOSFET EMP.\n  2.JFET & MOSFET ENR.\n  3.Return. "))
     
-        
-    elif option==7:
-        idss=float(input("Type Idss in Amp: "))
-        vp=float(input("Type vp in Volts: "))
-        vgs=float(input("Type vgs in Volts: "))
-        Jfet.calculate_parameters_jfet(idss,vgs,vp)
-        
-    elif option==8:
-        idon=float(input("Type idon value: "))
-        vgson=float(input("Type vgson value: "))
-        vgsth=float(input("Type vgsth value: "))
-        vgs=float(input("Type vgs value: ")) 
-        Mosfet.calculate_parameters_mosfet(idon,vgson,vgsth,vgs)
-    
-    elif option==9:
+    elif option==5:
         f=float(input("Type frequency of oscilation(Hz): "))
         b=float(input("Type baude rate: "))
         Atmega.calculate_UBRR(f,b)
     
-    elif option==10:
+    elif option==6:
         i=float(input("Type I in Amperes: "))
         ti=float(input("Type enviironmental temperature in C: "))
         tf=float(input("Type opeational temperature in C: "))
         thickness=float(input("Type width in 1 (35u),2 (70u) or 3 (105u) ounces/foot^2: "))
-        PCB.calculate_pcb_parameters(i,ti,tf,thickness) 
-   
-                                
+        PCB.calculate_pcb_parameters(i,ti,tf,thickness)
         
-    elif option==22:
+    elif option==7:
         cita=float(input("Type cita value: "))
         ts=float(input("Type ts value: "))
         if ts<0:
             print("ts must be higher than 0.")
             ts=float(input("Type ts value: "))
-        Controller.calculate_controller(cita,ts)
+        Controller.calculate_controller(cita,ts)        
         
-    
-    '''            
+    option=int(input("Create: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Exit. "))
     
