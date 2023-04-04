@@ -43,7 +43,12 @@ commands={
     "git a":"",
     "git show":"Show lastchanges.",
     "git branch + name of new branch":"Create a new branch.",
-    "git checkout + name of new branch":"It moves to new branch."
+    "git checkout + name of new branch":"It moves to new branch.",
+    "git commit -am ":"Do git add of all changes. Only to files added previously.",
+    "git log --all --graph":"Shows the branches",
+    "git log --all --graph --decorate --oneline":"More information",
+    "alias name=command\"\"":"Alias",
+    "":""   
     }
 
 print(commands)
