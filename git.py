@@ -36,7 +36,7 @@ commands={
     "git diff":"Differences between 2 files.",
     "git log --stat":"All changes.",
     "git checkout master + file":"Version required.",
-    "git push":"Send files to remote.",
+    "git push origin main":"Send files to remote.",
     "git fetch":"From remote to local.",
     "git pull":"It is a kind of merge.",
     "q":"Exit",
@@ -48,7 +48,13 @@ commands={
     "git log --all --graph":"Shows the branches",
     "git log --all --graph --decorate --oneline":"More information",
     "alias name=command\"\"":"Alias",
-    "":""   
+    "git tag -a v0.1 -m \"Message\" + hash" :"Tags for version.",
+    "git tag":"Show tag.",
+    "git show-ref --tags":"Show all tags.",
+    "git tag -d Name of tag":"Erase a tag.",
+    "git show-branch --all":"Shows all branches.",
+    "gitk":"Super command for visual interpretation."
+       
     }
 
 print(commands)
