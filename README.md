@@ -12,20 +12,9 @@ Enter same passphrase again:
 Your identification has been saved in /c/Users/jlhb1/.ssh/id_rsa
 Your public key has been saved in /c/Users/jlhb1/.ssh/id_rsa.pub
 The key fingerprint is:
-SHA256:J3EvkMOuBgQmqXg3K/Mp9eAuuGDrscsb4Q4akLKd9AU jlhb1984@gmail.com
+#######################
 The key's randomart image is:
-+---[RSA 4096]----+
-|..o              |
-|.o .   . .       |
-|o   E   * .      |
-|o...o. . = .     |
-|+o...o. S o .    |
-|+++o+o . o .     |
-|=*o*.+o          |
-|O.B +..          |
-|+Xo+.            |
-+----[SHA256]-----+
-
+########################
 jlhb1@DESKTOP-1EPJK6L MINGW64 ~ (master)
 $ ^C
 
