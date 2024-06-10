@@ -36,7 +36,7 @@ while option!=9:
                 amp=float(input("Type amplitude value: "))
                 phase=float(input("Type phase value in rads: "))
                 Mathcalculus.calculate_rec(amp,phase)        
-            option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return."))
+            option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return. "))
        
     elif option==2:
         option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
@@ -154,9 +154,9 @@ while option!=9:
         Controller.calculate_controller(cita,ts)   
 
     elif option==8:
-        ra=float(input("Type ra value: "))
-        rb=float(input("Type rb value: "))
-        c=float(input("Type c value: "))
+        ra=float(input("Type ra value en Ohms: "))
+        rb=float(input("Type rb value en Ohms: "))
+        c=float(input("Type c value en F: "))
         Lm555.calculate_parameters_lm555(ra,rb,c)
         
     option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.lm555 \n9.Exit! "))
