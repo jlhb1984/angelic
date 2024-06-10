@@ -14,7 +14,7 @@ option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5
 while option!=8:
         
     if option==1:
-        option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return."))
+        option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return. "))
         while option_cal!=6:
             if option_cal==1:
                 gradeang=float(input("Type grade value: "))
