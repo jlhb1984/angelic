@@ -154,9 +154,9 @@ while option!=9:
         Controller.calculate_controller(cita,ts)   
 
     elif option==8:
-        ra=float(input("Type ra value"))
-        rb=float(input("Type rb value"))
-        c=float(input("Type c value"))
-        Lm555.calculate_parameters_lm555(f,ra,rb,c)
+        ra=float(input("Type ra value: "))
+        rb=float(input("Type rb value: "))
+        c=float(input("Type c value: "))
+        Lm555.calculate_parameters_lm555(ra,rb,c)
         
     option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.lm555 \n9.Exit! "))
