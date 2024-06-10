@@ -9,9 +9,9 @@ from controller import Controller
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
+option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.LM555. \9.Exit! "))
 
-while option!=8:
+while option!=9:
         
     if option==1:
         option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return. "))
@@ -150,6 +150,12 @@ while option!=8:
         if ts<0:
             print("ts must be higher than 0.")
             ts=float(input("Type ts value: "))
-        Controller.calculate_controller(cita,ts)        
+        Controller.calculate_controller(cita,ts)   
+
+    elif option==8:
+        ra=float(input("Type ra value"))
+        rb=float(input("Type rb value"))
+        c=float(input("Type c value"))
+        lm555.calculate_parameters_lm555(ra,rb,c)
         
-    option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Exit! "))
+    option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.lm555 \n9.Exit! "))

@@ -1,6 +1,6 @@
 from ci import Ci
 
-class lm555:
+class lm555(Ci):
     f=float
     ra=float
     rb=float
