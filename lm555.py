@@ -1,6 +1,6 @@
 from ci import Ci
 
-class lm555(Ci):
+class Lm555(Ci):
     f=float
     ra=float
     rb=float
@@ -16,5 +16,6 @@ def __init__(self,analog,digital,f,ra,rb,c):
 
 def calculate_parameters_lm555(f,ra,rb,c):
     f=1/((ra*(ra+rb))*c)
+    print(vars(Lm555))
 
 

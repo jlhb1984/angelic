@@ -6,10 +6,11 @@ from pcb import PCB
 from circuit import Circuit
 from mathcalculus import Mathcalculus
 from controller import Controller
+from lm555 import Lm555
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.LM555. \9.Exit! "))
+option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.LM555. \n9.Exit! "))
 
 while option!=9:
         
@@ -156,6 +157,6 @@ while option!=9:
         ra=float(input("Type ra value"))
         rb=float(input("Type rb value"))
         c=float(input("Type c value"))
-        lm555.calculate_parameters_lm555(ra,rb,c)
+        Lm555.calculate_parameters_lm555(f,ra,rb,c)
         
     option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.lm555 \n9.Exit! "))
