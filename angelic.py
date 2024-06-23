@@ -154,7 +154,7 @@ while option!=9:
         Controller.calculate_controller(cita,ts)   
 
     elif option==8:
-        ra=float(input("Type ra value en Ohms: "))
+        ra=float(input("Type ra conectada a VCC value en Ohms: "))
         rb=float(input("Type rb value en Ohms: "))
         c=float(input("Type c value en F: "))
         Lm555.calculate_parameters_lm555(ra,rb,c)

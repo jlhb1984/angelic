@@ -17,7 +17,7 @@ class Lm555(Ci):
         self.c=c
 
     def calculate_parameters_lm555(ra,rb,c):
-        f=1/((ra*(ra+rb))*c)
+        f=1/((1.44*(ra+2*rb))*c)
         lm5551=Lm555(False,True,f,ra,rb,c)
         print(vars(lm5551))
 
