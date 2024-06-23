@@ -10,7 +10,7 @@ from lm555 import Lm555
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("\nMENU: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.LM555. \n9.Exit! "))
+option=int(input("\nMENU: \n1.Calculus.\n2.Circuit.\n3.Diode.\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Lm555. \n9.Exit! "))
 
 while option!=9:
         
@@ -159,4 +159,4 @@ while option!=9:
         c=float(input("Type c value en F: "))
         Lm555.calculate_parameters_lm555(ra,rb,c)
         
-    option=int(input("\nCreate: \n1.Calculus.\n2.Circuit.\n3.Diode\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.lm555 \n9.Exit! "))
+    option=int(input("\nOptions: \n1.Calculus.\n2.Circuit.\n3.Diode.\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Lm555. \n9.Exit! "))
