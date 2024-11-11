@@ -8,6 +8,7 @@ from mathcalculus import Mathcalculus
 from controller import Controller
 from lm555 import Lm555
 from bernoulli import Bernoulli
+from normal import Normal
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
@@ -43,10 +44,16 @@ while option!=10:
         option_dist=int(input("\n1.Bernoulli.\n2.Normal\n3.Exit. "))
         while option_dist!=3:
             if option_dist==1:
-                k=float(input("\nType number of successes k. "))
-                n=float(input("\nType number of trials n. "))
-                p=float(input("\nType probability p. "))
-                Bernoulli.calc_bernoulli(k,n,p)
+                k=float(input("Type number of successes k: "))
+                n=float(input("Type number of trials n: "))
+                p=float(input("Type probability p: "))
+                Bernoulli.calculate_bernoulli(k,n,p)
+            if option_dist==2:
+                print("\nDeveloping!")
+                sigma=float(input("Type sigma or std: "))
+                mu=float(input("Type media: "))
+                x=float(input("Type x value: "))
+                Normal.calculate_normal(x,mu,sigma)
             option_dist=int(input("\n1.Bernoulli.\n2.Normal\n3.Exit. "))            
        
     elif option==3:

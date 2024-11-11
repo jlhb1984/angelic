@@ -14,10 +14,10 @@ class Bernoulli:
         self.n=n
         self.p=p
 
-    def calc_bernoulli(k,n,p):
+    def calculate_bernoulli(k,n,p):
         dist=binom(n,p)
         pmf=dist.pmf(k)
         cdf=dist.cdf(k)
         print("pmf= ",pmf)
         print("cdf= ",cdf)
-        
+
