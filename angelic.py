@@ -7,12 +7,13 @@ from circuit import Circuit
 from mathcalculus import Mathcalculus
 from controller import Controller
 from lm555 import Lm555
+from bernoulli import Bernoulli
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
-option=int(input("\nMENU: \n1.Calculus.\n2.Circuit.\n3.Diode.\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Lm555. \n9.Exit! "))
+option=int(input("\nMENU: \n1.Calculus.\n2.Probability.\n3.Circuit.\n4.Diode.\n5.Transistor.\n6.ATMEGA.\n7.PCB.\n8.Controller.\n9.Lm555. \n10.Exit! "))
 
-while option!=9:
+while option!=10:
         
     if option==1:
         option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return. "))
@@ -37,8 +38,18 @@ while option!=9:
                 phase=float(input("Type phase value in rads: "))
                 Mathcalculus.calculate_rec(amp,phase)        
             option_cal=int(input("  1.Grade to rads.\n  2.Rads to grades\n  3.roots.\n  4.Rec pol\n  5.Pol rec.\n  6.Return. "))
-       
+    
     elif option==2:
+        option_dist=int(input("\n1.Bernoulli.\n2.Normal\n3.Exit. "))
+        while option_dist!=3:
+            if option_dist==1:
+                k=float(input("\nType number of successes k. "))
+                n=float(input("\nType number of trials n. "))
+                p=float(input("\nType probability p. "))
+                Bernoulli.calc_bernoulli(k,n,p)
+            option_dist=int(input("\n1.Bernoulli.\n2.Normal\n3.Exit. "))            
+       
+    elif option==3:
         option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
         while option_circuit!=8:
             if option_circuit==1:
@@ -77,7 +88,7 @@ while option!=9:
                 Circuit.calculate_divisor(vs,z1,z2)
             option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
     
-    elif option==3:
+    elif option==4:
         option_diode=int(input("  1.id.\n  2.is.\n  3.vt.\n  4.vd.\n  5.n.\n  6.Return. "))  
         while option_diode!=6:
             if option_diode==1:
@@ -117,7 +128,7 @@ while option!=9:
                 Diode.calculate_temp(vt)    
             option_diode=int(input("  1.id.\n  2.is.\n  3.vt.\n  4.vd.\n  5.n.\n  6.Return. "))                  
         
-    elif option==4:
+    elif option==5:
         option_transistor=int(input("  1.JFET & MOSFET EMP.\n  2.JFET & MOSFET ENR.\n  3.Return. "))
         while option_transistor!=3:
             if option_transistor==1:
@@ -133,19 +144,19 @@ while option!=9:
                 Mosfet.calculate_parameters_mosfet(idon,vgson,vgsth,vgs)
             option_transistor=int(input("  1.JFET & MOSFET EMP.\n  2.JFET & MOSFET ENR.\n  3.Return. "))
     
-    elif option==5:
+    elif option==6:
         f=float(input("Type frequency of oscilation(Hz): "))
         b=float(input("Type baude rate: "))
         Atmega.calculate_UBRR(f,b)
     
-    elif option==6:
+    elif option==7:
         i=float(input("Type I in Amperes: "))
         ti=float(input("Type enviironmental temperature in C: "))
         tf=float(input("Type opeational temperature in C: "))
         thickness=float(input("Type width in 1 (35u),2 (70u) or 3 (105u) ounces/foot^2: "))
         PCB.calculate_pcb_parameters(i,ti,tf,thickness)
         
-    elif option==7:
+    elif option==8:
         cita=float(input("Type cita value: "))
         ts=float(input("Type ts value: "))
         if ts<0:
@@ -153,10 +164,10 @@ while option!=9:
             ts=float(input("Type ts value: "))
         Controller.calculate_controller(cita,ts)   
 
-    elif option==8:
+    elif option==9:
         ra=float(input("Type ra conectada a VCC value en Ohms: "))
         rb=float(input("Type rb value en Ohms: "))
         c=float(input("Type c value en F: "))
         Lm555.calculate_parameters_lm555(ra,rb,c)
         
-    option=int(input("\nOptions: \n1.Calculus.\n2.Circuit.\n3.Diode.\n4.Transistor.\n5.ATMEGA.\n6.PCB.\n7.Controller.\n8.Lm555. \n9.Exit! "))
+    option=int(input("\nMENU: \n1.Calculus.\n2.Probability.\n3.Circuit.\n4.Diode.\n5.Transistor.\n6.ATMEGA.\n7.PCB.\n8.Controller.\n9.Lm555. \n10.Exit! "))
