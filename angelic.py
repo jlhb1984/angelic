@@ -9,6 +9,7 @@ from controller import Controller
 from lm555 import Lm555
 from bernoulli import Bernoulli
 from normal import Normal
+from circuit import Circuit
 #from divisor import Divisor
 
 print(" A  N  G  E  L  I  C")
@@ -57,8 +58,8 @@ while option!=10:
             option_dist=int(input("\n1.Bernoulli.\n2.Normal\n3.Exit. "))            
        
     elif option==3:
-        option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
-        while option_circuit!=8:
+        option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.L\n  5.LC.\n  6.flc.\n  7.Hay-Maxwell.\n  8.V-I divisors.\n  9.Return. "))   
+        while option_circuit!=9:
             if option_circuit==1:
                 n=int(input("Type number of resistaces to sum: "))
                 Circuit.calculate_resistances_addition(n)
@@ -71,16 +72,21 @@ while option!=10:
                 ra=float(input("Type Ra value: "))
                 rb=float(input("Type Rb value: "))
                 rc=float(input("Type Rc value: "))
-                Circuit.calculate_dy(ra,rb,rc)                
+                Circuit.calculate_dy(ra,rb,rc)
             elif option_circuit==4:
+                N=float(input("Type number of wheels: "))
+                long=float(input("Type the length in m: "))
+                r=float(input("Type the radious: "))
+                Circuit.calculate_L(N,long,r)                
+            elif option_circuit==5:
                 l=float(input("Type L value in Henrys: "))
                 c=float(input("Type C value in Faradays: "))
                 Circuit.calculate_flc(l,c)
-            elif option_circuit==5:
+            elif option_circuit==6:
                 lc=float(input("Type L value in Henrys or C value in Faradays: "))
                 f=float(input("Type frequency value in Hz: "))
                 Circuit.calculate_loc(lc,f)
-            elif option_circuit==6:
+            elif option_circuit==7:
                 r1=float(input("Type R1 value: "))
                 r2=float(input("Type R2 value: "))
                 r3=float(input("Type R3 value: "))
@@ -88,12 +94,12 @@ while option!=10:
                 c=float(input("Type c value: "))
                 w=float(input("Type w value: "))    
                 Circuit.calculate_hmax(r1,r2,r3,r4,c,w)               
-            elif option_circuit==7:
+            elif option_circuit==8:
                 z1=float(input("Type Z1(ra) value: "))
                 z2=float(input("Type Z1(rb) value: "))
                 vs=float(input("Type Vs value: "))
                 Circuit.calculate_divisor(vs,z1,z2)
-            option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.LC.\n  5.flc.\n  6.Hay-Maxwell.\n  7.V-I divisors.\n  8.Return. "))   
+            option_circuit=int(input("  1.Serial & parallel impedance addition.\n  2.Y-D.\n  3.D-Y.\n  4.L.\n  5.LC.\n  6.flc.\n  7.Hay-Maxwell.\n  8.V-I divisors.\n  9.Return. "))   
     
     elif option==4:
         option_diode=int(input("  1.id.\n  2.is.\n  3.vt.\n  4.vd.\n  5.n.\n  6.Return. "))  

@@ -68,6 +68,12 @@ class Circuit:
         rc=(r1*r2+r2*r3+r3*r1)/r3
         circuityd=Circuit(0,0,0,ra,rb,rc,r1,r2,r3,0,0,0,0,0,0,0,0,0,0,0,0,0)
         print(vars(circuityd)) 
+
+    def calculate_L(N,long,r):
+        uo=(4*pi)/10000000
+        l=(uo*(N**2)*(pi*(r**2)))/long
+        circuitl=Circuit(0,0,0,0,0,0,0,0,0,l,0,0,0,0,0,0,0,0,0,0,0,0)
+        print(vars(circuitl))
         
     def calculate_flc(l,c):
         flc=(1/(2*pi))*((1/(l*c))**(0.5)) 
